@@ -1,0 +1,51 @@
+<div class="card">
+    <div class="card-body">
+
+    <h2>{{isInEditMode ? 'UPDATE TODO' : 'ADD TODO'}}</h2>
+
+    <div class="form-group">
+        <label for="todoItem">TodoItem</label>
+
+        <input
+            type="text"
+            id="todoItem"
+            #todoItem
+            class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for="isCompleted">IsCompleted</label>
+
+        <select
+            id="isCompleted"
+            #isCompleted
+            class="form-control">
+
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+
+        </select>
+    </div>
+
+    <button
+        *ngIf="!isInEditMode"
+        (click)="ontodoadd()"
+        mat-raised-button
+        color="primary"
+        class="w-100 mt-2" >
+        ADD TODO
+    </button>
+
+    <button
+        *ngIf="isInEditMode"
+        (click)="onUpdateTodo()"
+        mat-raised-button
+        color="warn"
+        class="w-100">
+        UPDATE TODO
+    </button>
+
+</div>
+
+
+</div>

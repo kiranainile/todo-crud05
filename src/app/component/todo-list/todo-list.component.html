@@ -1,0 +1,31 @@
+<div class="card">
+    <div class="card-body">
+        <ul class="list-group">
+            <li
+            *ngFor="let todo of getTodos"
+             class="list-group-item  d-flex justify-content-between">
+             {{todo.todoItem}}
+             
+             <div>
+                <button
+            (click)="onEditTodo(todo)"
+            mat-mini-fab
+            color="primary"
+            class="me-2"
+          >
+            <mat-icon>edit</mat-icon>
+          </button>
+
+          <button
+            (click)="onRemove(todo)"
+            mat-mini-fab
+            color="warn"
+          >
+            <mat-icon>delete</mat-icon>
+          </button>
+            </div>
+
+            </li>
+        </ul>
+    </div>
+</div>
