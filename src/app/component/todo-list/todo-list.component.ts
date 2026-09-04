@@ -27,7 +27,7 @@ export class TodoListComponent implements OnInit {
     console.log(todo);
 
     let getPassword=prompt("password")
-    if(getPassword="223344"){
+    if(getPassword==="223344"){
      this.emitRemoveId.emit(todo);
     }else{
       alert('invalid password try again')
