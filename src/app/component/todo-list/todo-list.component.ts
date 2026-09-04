@@ -22,18 +22,18 @@ export class TodoListComponent implements OnInit {
     console.log(todo);
     this.emitEditTodo.emit(todo);
   }
+onRemove(todo: Itodo) {
+  console.log(todo);
 
-  onRemove(todo: Itodo) {
-    console.log(todo);
+  let getPassword = prompt("password");
 
-    let getPassword=prompt("password")
-    if(getPassword==="223344"){
-     this.emitRemoveId.emit(todo);
-    }else{
-      alert('invalid password try again')
-    }
+  if (getPassword === "223344") {
+    this.emitRemoveId.emit(todo);
+  } else {
+    alert("invalid password try again");
+  }
+}
 
 
    
   }
-}
